@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "toe-calculator",
+    "name": "Toe Calculator",
     "slug": "toe-calculator",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,8 +19,14 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "package": "omg.freedcapybara.toecalculator",
+      "versionCode": 1
+    },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A crappy mobile app for calculating toe.",
+    "githubUrl": "https://github.com/FreedCapybara/toe-calculator"
   }
 }
