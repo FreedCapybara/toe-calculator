@@ -6,7 +6,7 @@ export default function PizzaTranslator() {
   const [front, setFront] = useState('');
   const [rear, setRear] = useState('');
 
-  const getToe = (front, rear) => {
+  const calculateToe = (front, rear) => {
     return Math.asin((rear - front) / 36) * (180 / Math.PI);
   };
 
@@ -27,9 +27,13 @@ export default function PizzaTranslator() {
         defaultValue={front}
       />
       <Text style={{padding: 10, fontSize: 42}}>
-        {getToe(front, rear).toFixed(2)}&deg;
+        {calculateToe(front, rear).toFixed(2)}&deg;
       </Text>
       <Text style={{fontStyle: 'italic'}}>Cheatsheet:</Text>
+      <Text>Toe in (outside car) - rotate right</Text>
+      <Text>Toe out (outside car) - rotate left</Text>
+      <Text>Toe in (under car) - rotate left</Text>
+      <Text>Toe out (under car) - rotate right</Text>
       <Text>1/16 = .0625</Text>
       <Text>1/8 = .125</Text>
       <Text>3/16 = .1875</Text>
