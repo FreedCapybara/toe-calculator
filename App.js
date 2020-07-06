@@ -12,7 +12,7 @@ export default function PizzaTranslator() {
 
   return (
     <View style={{padding: 10}}>
-      <Text>Rear</Text>
+      <Text style={{paddingTop: 20}}>Rear</Text>
       <TextInput
         style={{padding: 4, height: 40, borderColor: '#e0e0e0', borderWidth: 1}}
         placeholder="Enter the rear measurement (decimal inches)"
