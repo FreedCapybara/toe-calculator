@@ -26,7 +26,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": "A crappy mobile app for calculating toe.",
+    "description": "A mobile app for calculating toe.",
     "githubUrl": "https://github.com/FreedCapybara/toe-calculator"
   }
 }

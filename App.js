@@ -1,14 +1,12 @@
 import React, { Component, useState } from 'react';
 import { Text, TextInput, View } from 'react-native';
 
-export default function PizzaTranslator() {
+export default function App() {
 
   const [front, setFront] = useState('');
   const [rear, setRear] = useState('');
 
-  const calculateToe = (front, rear) => {
-    return Math.asin((rear - front) / 36) * (180 / Math.PI);
-  };
+  const toeDegrees = Math.asin((rear - front) / 36) * (180 / Math.PI);
 
   return (
     <View style={{padding: 10}}>
@@ -19,6 +17,7 @@ export default function PizzaTranslator() {
         onChangeText={rear => setRear(rear)}
         defaultValue={rear}
       />
+
       <Text>Front</Text>
       <TextInput
         style={{padding: 4, height: 40, borderColor: '#e0e0e0', borderWidth: 1}}
@@ -26,9 +25,11 @@ export default function PizzaTranslator() {
         onChangeText={front => setFront(front)}
         defaultValue={front}
       />
+
       <Text style={{padding: 10, fontSize: 42}}>
-        {calculateToe(front, rear).toFixed(2)}&deg;
+        {toeDegrees.toFixed(2)}&deg;
       </Text>
+
       <Text style={{fontStyle: 'italic'}}>Cheatsheet:</Text>
       <Text>Toe in (outside car) - rotate right</Text>
       <Text>Toe out (outside car) - rotate left</Text>
